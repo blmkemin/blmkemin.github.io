@@ -6,7 +6,7 @@
     <title>İletişim Formu - Muhammet Emin Balmuk</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body class="contact-form-page">
 
     <div class="wrapper">
 
@@ -21,27 +21,19 @@
             </ul>
         </nav>
 
-        <!-- HEADER -->
-        <header>
-            <h1>İletişim Formu</h1>
-            <p>
-                Aşağıdaki detaylı formu doldurarak mesajınızı iletebilirsiniz.
-            </p>
-        </header>
-
         <div class="contact-container">
             <h2>Detaylı İletişim Formu</h2>
             <form action="#" method="post">
-                <label for="fullname">Ad Soyad</label>
+                <label for="fullname">Ad Soyad:</label>
                 <input type="text" id="fullname" name="fullname" placeholder="Örn: Asaf Karataş" required>
 
-                <label for="email">E-posta Adresi</label>
+                <label for="email">E-posta Adresi:</label>
                 <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
 
-                <label for="tracking-password">Başvuru Takip Şifresi</label>
+                <label for="tracking-password">Başvuru Takip Şifresi:</label>
                 <input type="password" id="tracking-password" name="tracking-password" placeholder="Şifrenizi girin" required>
 
-                <label>İletişim Tercihi</label>
+                <label>İletişim Tercihi:</label>
                 <div class="choice-box">
                     <label class="option-item" for="contact-email">
                         <input type="radio" id="contact-email" name="contact-preference" value="email" checked>
@@ -53,7 +45,7 @@
                     </label>
                 </div>
 
-                <label>İlgi Alanları / Yetenekler</label>
+                <label>İlgi Alanları / Yetenekler:</label>
                 <div class="choice-box">
                     <label class="option-item" for="skill-html">
                         <input type="checkbox" id="skill-html" name="skills" value="html">
@@ -69,7 +61,7 @@
                     </label>
                 </div>
 
-                <label for="subject">Konu</label>
+                <label for="subject">Konu:</label>
                 <select id="subject" name="subject" required>
                     <option value="">Lütfen bir konu seçin...</option>
                     <option value="is-teklifi">İş Teklifi</option>
@@ -77,10 +69,10 @@
                     <option value="geri-bildirim">Geri Bildirim</option>
                 </select>
 
-                <label for="attachment">Özgeçmiş (CV) veya Fotoğraf Yükle</label>
+                <label for="attachment">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
                 <input type="file" id="attachment" name="attachment" accept=".pdf,.png,.jpg,.jpeg">
 
-                <label for="message">Mesajınız</label>
+                <label for="message">Mesajınız:</label>
                 <textarea id="message" name="message" rows="6" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..." required></textarea>
 
                 <div class="form-actions">
