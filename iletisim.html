@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim – CSS Temel Ödevi</title>
+    <title>İletişim - Muhammet Emin Balmuk</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
 
         <!-- NAV BAR -->
         <nav>
-            <span class="site-title">CSS Temel Ödevi</span>
+            <span class="site-title">Muhammet Emin Balmuk</span>
             <ul>
                 <li><a href="index.html">Ana Sayfa</a></li>
                 <li><a href="hakkinda.html">Hakkında</a></li>
@@ -25,8 +25,8 @@
         <header>
             <h1>İletişim</h1>
             <p>
-                Bize ulaşmak için aşağıdaki iletişim bilgilerini kullanabilirsiniz.
-                En kısa sürede geri dönüş sağlanacaktır.
+                İş birliği, proje geliştirme ve staj/fırsat görüşmeleri için aşağıdaki
+                kanallardan benimle iletişime geçebilirsiniz.
             </p>
         </header>
 
@@ -36,33 +36,58 @@
             <section class="content">
                 <h2>İletişim Bilgileri</h2>
                 <p>
-                    <strong>E-posta:</strong> eminblmk@email.com<br>
+                    <strong>E-posta:</strong> eminblmk@gmail.com<br>
                     <strong>Telefon:</strong> +90 533 365 69 44<br>
                     <strong>Adres:</strong> İstanbul, Türkiye
                 </p>
                 <p>
-                    Çalışma saatlerim hafta içi 09:00 – 18:00 arasındadır.
-                    Hafta sonu mesajlarınızı Pazartesi günü yanıtlıyoruz.
+                    Hafta içi mesajlara hızlı geri dönüş sağlamaya özen gösteriyorum.
+                    Veri bilimi, yapay zeka ve yazılım projeleri için iletişime geçebilirsiniz.
                 </p>
             </section>
 
             <!-- Sağ Sütun: Yan Menü / Bilgi -->
             <aside class="sidebar">
-                <h2>Sosyal Medya</h2>
+                <h2>Bağlantılar</h2>
                 <p>
-                    Güncel duyurular ve paylaşımlar için sosyal medya hesaplarımızı
-                    takip edebilirsiniz. Tüm platformlarda aktif olarak yer almaktayız.
+                    <strong>GitHub Proje Linki:</strong><br>
+                    https://github.com/blmkemin/blmkemin.github.io
                 </p>
                 <p>
-                    Sorularınız için e-posta yoluyla iletişime geçmeniz en hızlı
-                    geri dönüş almanızı sağlayacaktır.
+                    Teknik içerikler, proje detayları ve iş birlikleri için
+                    e-posta üzerinden ulaşmanız en hızlı iletişim yöntemidir.
                 </p>
             </aside>
         </main>
 
+        <!-- İLETİŞİM FORMU -->
+        <div class="contact-container">
+            <h2>İletişim Formu</h2>
+            <form action="#" method="post">
+                <label for="fullname">Ad Soyad</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Adınızı ve soyadınızı girin" required>
+
+                <label for="email">E-posta</label>
+                <input type="email" id="email" name="email" placeholder="ornek@email.com" required>
+
+                <label for="subject">Konu</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Konu seçiniz</option>
+                    <option value="is-teklifi">İş Teklifi</option>
+                    <option value="soru">Soru</option>
+                    <option value="geri-bildirim">Geri Bildirim</option>
+                </select>
+
+                <label for="message">Mesaj</label>
+                <textarea id="message" name="message" rows="5" placeholder="Mesajınızı yazın" required></textarea>
+
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+
         <!-- FOOTER -->
         <footer>
-            <p>© 2026 CSS Temel Örnek. Bu sayfa basit bir HTML+CSS alıştırmasıdır.</p>
+            <p>© 2026 Muhammet Emin Balmuk. Kişisel portfolyo sayfası.</p>
         </footer>
 
     </div>

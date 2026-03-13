@@ -179,3 +179,57 @@ footer p {
     text-align: center;
     line-height: 1.5;
 }
+
+/* İLETİŞİM FORMU */
+.contact-container {
+    width: 600px;
+    max-width: calc(100% - 44px);
+    margin: 0 auto 20px;
+    padding: 20px;
+    border: 1px solid #d4d4e0;
+    border-radius: 6px;
+    background-color: #fafafe;
+}
+
+.contact-container h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #1a1a2e;
+}
+
+.contact-container label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.contact-container input,
+.contact-container select,
+.contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    border: 1px solid #c9c9d8;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-container textarea {
+    resize: vertical;
+}
+
+.contact-container button {
+    background-color: #2a5ba8;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.contact-container button:hover {
+    background-color: #224a88;
+}
