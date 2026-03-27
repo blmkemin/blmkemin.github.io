@@ -168,13 +168,18 @@ body {
     color: #3a4254;
 }
 
-.cards-section {
+.cards-wrap {
     flex: 1;
+    min-height: 0;
+    overflow: auto;
+    margin-bottom: 0.5rem;
+}
+
+.cards-section {
     display: flex;
     flex-wrap: wrap;
     gap: 0.55rem;
     align-content: flex-start;
-    margin-bottom: 0.5rem;
 }
 
 .card {
