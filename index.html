@@ -3,71 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammet Emin Balmuk - Portfolyo</title>
+    <title>Lab Uygulamasi - Flexbox</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-
     <div class="wrapper">
-
-        <!-- NAV BAR -->
-        <nav>
-            <span class="site-title">Muhammet Emin Balmuk</span>
-            <ul>
-                <li><a href="index.html" class="active">Ana Sayfa</a></li>
-                <li><a href="hakkinda.html">Hakkında</a></li>
-                <li><a href="hizmetler.html">Hizmetler</a></li>
-                <li><a href="iletisim.html">İletişim</a></li>
+        <nav class="navbar">
+            <div class="logo">FlexLab</div>
+            <ul class="nav-links">
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#">Hakkinda</a></li>
+                <li><a href="#">Projeler</a></li>
+                <li><a href="#">Iletisim</a></li>
             </ul>
         </nav>
 
-        <!-- HEADER -->
-        <header>
-            <h1>Muhammet Emin Balmuk</h1>
-            <p>
-                Marmara Üniversitesi Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. Veri bilimi ve yapay zeka
-                alanında yoğunlaşarak Python, makine öğrenmesi ve gerçek zamanlı sistem geliştirme üzerine
-                proje üretiyorum.
-            </p>
-        </header>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Flexbox Lab Uygulamasi</h1>
+                <p>
+                    Bu tek sayfa duzende yatay-dikey hizalama, flex-grow, direction degisimi,
+                    wrap ve stretch davranislari birlikte uygulanmistir.
+                </p>
+                <button type="button">Detaylari Incele</button>
+            </div>
+            <div class="hero-image" aria-hidden="true">Gorsel Kutusu</div>
+        </section>
 
-        <!-- MAIN CONTENT -->
-        <main>
-            <!-- Sol Sütun: İçerik -->
-            <section class="content">
-                <h2>Kısa Profil</h2>
-                <p>
-                    Google Yapay Zeka ve Teknoloji Akademisi'nde 8 ay süren Data Science eğitimini tamamladım.
-                    Eğitim sürecinde veri analizi, model geliştirme ve üretim ortamına uygun optimizasyon
-                    konularında kendimi geliştirdim.
-                </p>
-                <p>
-                    Takım çalışmasına uyumlu, çözüm odaklı ve öğrenmeye açık bir mühendis adayı olarak;
-                    gelecekte veri bilimci/yapay zeka mühendisi rolünde, otonom sistemler ve veri analizi
-                    projelerinde çalışmayı hedefliyorum.
-                </p>
-            </section>
+        <section class="cards-section">
+            <article class="card">Kart 1</article>
+            <article class="card">Kart 2</article>
+            <article class="card">Kart 3</article>
+            <article class="card">Kart 4</article>
+            <article class="card">Kart 5</article>
+            <article class="card">Kart 6</article>
+        </section>
 
-            <!-- Sağ Sütun: Yan Menü / Bilgi -->
-            <aside class="sidebar">
-                <h2>Öne Çıkan Bilgiler</h2>
-                <p>
-                    Deneyim: Google Yapay Zeka ve Teknoloji Akademisi Data Science Trainee (Aralık 2024 - Ağustos 2025),
-                    Shell Future Talent Business Intelligence Trainee (Şubat 2026 - Devam),
-                    GDG Proje Geliştirme Takımı Core Member (Ocak 2026 - Devam).
-                </p>
-                <p>
-                    Teknik odak: Python (ileri), Java, C/C++, JavaScript/Node.js/Next.js, HTML/CSS,
-                    SQL/NoSQL. İngilizce seviyem B2, Almanca seviyem A2-B1 aralığındadır.
-                </p>
-            </aside>
-        </main>
+        <section class="grow-recap">
+            <div class="grow-box box-1">Kutu 1 (grow:1)</div>
+            <div class="grow-box box-2">Kutu 2 (grow:2)</div>
+            <div class="grow-box box-3">Kutu 3 (grow:1)</div>
+        </section>
 
-        <!-- FOOTER -->
-        <footer>
-            <p>© 2026 Muhammet Emin Balmuk. Kişisel portfolyo sayfası.</p>
+        <footer class="footer">
+            <p>© 2026 Flexbox Lab - HTML ve CSS</p>
         </footer>
-
     </div>
 
 </body>
