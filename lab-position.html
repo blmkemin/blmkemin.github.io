@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB: CSS Position ile Etkilesimli Duyuru Karti</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef0f4;
+            color: #26283a;
+        }
+
+        .page {
+            min-height: 100vh;
+            padding: 88px 20px 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .back-home {
+            position: fixed;
+            top: 18px;
+            left: 18px;
+            z-index: 20;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 128px;
+            padding: 14px 18px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #2a63e4, #427bff);
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0 14px 28px rgba(44, 79, 173, 0.25);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            cursor: pointer;
+        }
+
+        .back-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 34px rgba(44, 79, 173, 0.32);
+        }
+
+        .back-home:active {
+            transform: translateY(0);
+        }
+
+        .page-title {
+            width: min(100%, 760px);
+            text-align: center;
+        }
+
+        .page-title h1 {
+            font-size: clamp(1.7rem, 3vw, 2.6rem);
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            color: #62667e;
+            line-height: 1.6;
+        }
+
+        .announcement-card {
+            position: relative;
+            width: min(100%, 760px);
+            min-height: 470px;
+            padding: 72px 52px 70px;
+            border-radius: 26px;
+            background: linear-gradient(120deg, #dce8ff 0%, #dcd8ff 42%, #edd5ff 100%);
+            box-shadow: 0 24px 40px rgba(116, 124, 164, 0.18);
+            overflow: hidden;
+        }
+
+        .announcement-card::before {
+            content: "";
+            position: absolute;
+            right: 34px;
+            top: 170px;
+            width: 112px;
+            height: 224px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.28);
+            z-index: 1;
+            animation: floatBlob 4.8s ease-in-out infinite;
+        }
+
+        .announcement-card::after {
+            content: "";
+            position: absolute;
+            inset: 20px;
+            border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            z-index: 0;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 3;
+            max-width: 360px;
+        }
+
+        .card-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.05;
+            margin-bottom: 24px;
+        }
+
+        .card-content p {
+            font-size: 1.08rem;
+            line-height: 1.9;
+            color: #33354d;
+        }
+
+        .badge {
+            position: absolute;
+            z-index: 4;
+            padding: 12px 16px;
+            border-radius: 14px;
+            font-weight: 700;
+            box-shadow: 0 12px 24px rgba(92, 89, 151, 0.12);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+            cursor: pointer;
+        }
+
+        .badge:hover {
+            transform: scale(1.06);
+            box-shadow: 0 18px 28px rgba(92, 89, 151, 0.18);
+        }
+
+        .badge-free {
+            top: 26px;
+            left: 18px;
+            background: #fff1aa;
+        }
+
+        .badge-date {
+            top: 24px;
+            right: 20px;
+            background: #d9ffe8;
+        }
+
+        .badge-location {
+            right: 58px;
+            bottom: 138px;
+            background: #ffffff;
+            z-index: 5;
+        }
+
+        .badge-register {
+            right: 22px;
+            bottom: 26px;
+            background: #ffd7d7;
+        }
+
+        .helper-menu {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 20;
+            padding: 18px 16px;
+            border: none;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #6f39ff, #8a4dff);
+            color: #fff;
+            font-weight: 700;
+            box-shadow: 0 18px 30px rgba(109, 65, 227, 0.32);
+            transition: transform 0.25s ease, filter 0.25s ease;
+            animation: pulseMenu 2.6s ease-in-out infinite;
+            cursor: pointer;
+        }
+
+        .helper-menu:hover {
+            transform: translateY(-4px);
+            filter: brightness(1.06);
+        }
+
+        .helper-menu:active {
+            transform: scale(0.97);
+        }
+
+        .footer {
+            color: #64677b;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        @keyframes floatBlob {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-14px);
+            }
+        }
+
+        @keyframes pulseMenu {
+            0%,
+            100% {
+                box-shadow: 0 18px 30px rgba(109, 65, 227, 0.32);
+            }
+
+            50% {
+                box-shadow: 0 20px 38px rgba(109, 65, 227, 0.46);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                padding-top: 92px;
+            }
+
+            .announcement-card {
+                min-height: 540px;
+                padding: 90px 28px 110px;
+            }
+
+            .card-content {
+                max-width: 100%;
+            }
+
+            .badge-location {
+                right: 22px;
+                bottom: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="back-home" href="index.html">Ana Sayfaya Don</a>
+
+    <main class="page">
+        <header class="page-title">
+            <h1>CSS Position ile Etkilesimli Duyuru Karti</h1>
+            <p>Kampus etkinligi duyurusu icin relative, absolute, fixed, z-index, hover ve animasyon birlikte kullanildi.</p>
+        </header>
+
+        <section class="announcement-card">
+            <div class="badge badge-free">Ucretsiz</div>
+            <div class="badge badge-date">24 Nisan</div>
+            <div class="badge badge-location">Konum: Konferans Salonu</div>
+            <div class="badge badge-register">Son Kayit</div>
+
+            <div class="card-content">
+                <h2>Teknoloji Toplulugu Etkinligi</h2>
+                <p>
+                    Bu ornek sayfada amac; CSS position ozelliklerini kullanarak tek bir duyuru karti
+                    uzerinde relative, absolute, fixed, z-index, hover, cursor ve animasyon mantigini
+                    birlikte gostermektir.
+                </p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>2026 - LAB Position Ornek Calismasi</p>
+        </footer>
+    </main>
+
+    <button class="helper-menu" type="button">Yardimci Menu</button>
+</body>
+</html>

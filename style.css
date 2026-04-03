@@ -94,7 +94,8 @@ body {
     color: #505a6d;
 }
 
-.hero-content button {
+.hero-content button,
+.hero-link {
     width: 120px;
     border: none;
     border-radius: 6px;
@@ -103,6 +104,13 @@ body {
     padding: 0.4rem 0.75rem;
     font-size: 0.78rem;
     cursor: pointer;
+}
+
+.hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .hero-image {
