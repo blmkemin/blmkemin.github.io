@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<main class="home-shell">
+    <section class="home-card">
+        <span class="badge rounded-pill text-bg-primary-subtle text-primary px-4 py-2 fs-6">
+            Web Programlama Dersi
+        </span>
+
+        <h1 class="display-4 fw-bold mt-4 mb-3">Laboratuvar Ana Sayfası</h1>
+        <p class="lead text-secondary mx-auto">
+            Bu sayfa GitHub Pages üzerinde yayınlanan laboratuvar uygulamalarına giriş için
+            hazırlanmıştır. Aşağıdaki butondan hafta 7 uygulamasına geçebilirsiniz.
+        </p>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
+            <a class="btn btn-primary btn-lg px-4 py-3 fw-semibold" asp-controller="Home" asp-action="Hafta7">
+                Hafta 7 Uygulamasına Git
+            </a>
+            <a class="btn btn-secondary-subtle btn-lg px-4 py-3 fw-semibold" href="#haftalar">
+                Diğer Haftalar
+            </a>
+        </div>
+
+        <div id="haftalar" class="row g-3 mt-4 text-center">
+            <div class="col-12 col-sm-6 col-lg">
+                <a class="week-tile" href="#">
+                    <strong>Hafta 1</strong>
+                    <span>GitHub Pages</span>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg">
+                <a class="week-tile" asp-controller="Home" asp-action="Hakkinda">
+                    <strong>Hafta 2</strong>
+                    <span>HTML + CSS</span>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg">
+                <a class="week-tile" asp-controller="Home" asp-action="IletisimForm">
+                    <strong>Hafta 3</strong>
+                    <span>Form Yapıları</span>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg">
+                <a class="week-tile" asp-controller="Home" asp-action="Index">
+                    <strong>Hafta 4</strong>
+                    <span>Flexbox</span>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg">
+                <a class="week-tile" href="#">
+                    <strong>Hafta 5</strong>
+                    <span>Position</span>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg">
+                <a class="week-tile" asp-controller="Home" asp-action="Iletisim">
+                    <strong>Hafta 6</strong>
+                    <span>JavaScript</span>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg">
+                <a class="week-tile" asp-controller="Home" asp-action="Hafta7">
+                    <strong>Hafta 7</strong>
+                    <span>Bootstrap + JavaScript</span>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>

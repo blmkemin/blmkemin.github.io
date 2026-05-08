@@ -1,0 +1,72 @@
+@{
+    ViewData["Title"] = "İletişim Formu";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/styles/contact-form.css" asp-append-version="true" />
+}
+
+<body class="content-page contact-form-page">
+    <div class="wrapper">
+        <div class="contact-container">
+            <h2>Detaylı İletişim Formu</h2>
+            <form action="#" method="post">
+                <label for="fullname">Ad Soyad:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Örn: Muhammet Emin Balmuk" required>
+
+                <label for="email">E-posta Adresi:</label>
+                <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
+
+                <label for="tracking-password">Başvuru Takip Şifresi:</label>
+                <input type="password" id="tracking-password" name="tracking-password" placeholder="Şifrenizi girin" required>
+
+                <label>İletişim Tercihi:</label>
+                <div class="choice-box">
+                    <label class="option-item" for="contact-email">
+                        <input type="radio" id="contact-email" name="contact-preference" value="email" checked>
+                        Bana e-posta ile ulaşın
+                    </label>
+                    <label class="option-item" for="contact-phone">
+                        <input type="radio" id="contact-phone" name="contact-preference" value="phone">
+                        Bana telefonla ulaşın
+                    </label>
+                </div>
+
+                <label>İlgi Alanları / Yetenekler:</label>
+                <div class="choice-box">
+                    <label class="option-item" for="skill-html">
+                        <input type="checkbox" id="skill-html" name="skills" value="html">
+                        HTML
+                    </label>
+                    <label class="option-item" for="skill-css">
+                        <input type="checkbox" id="skill-css" name="skills" value="css">
+                        CSS
+                    </label>
+                    <label class="option-item" for="skill-algorithm">
+                        <input type="checkbox" id="skill-algorithm" name="skills" value="algorithm">
+                        Algoritma
+                    </label>
+                </div>
+
+                <label for="subject">Konu:</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Lütfen bir konu seçin...</option>
+                    <option value="is-teklifi">İş Teklifi</option>
+                    <option value="soru">Soru</option>
+                    <option value="geri-bildirim">Geri Bildirim</option>
+                </select>
+
+                <label for="attachment">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+                <input type="file" id="attachment" name="attachment" accept=".pdf,.png,.jpg,.jpeg">
+
+                <label for="message">Mesajınız:</label>
+                <textarea id="message" name="message" rows="6" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..." required></textarea>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Gönder</button>
+                    <button type="reset" class="btn-reset">Temizle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

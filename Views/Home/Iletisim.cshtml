@@ -1,0 +1,52 @@
+@{
+    ViewData["Title"] = "İletişim";
+}
+
+<body class="content-page">
+    <div class="wrapper">
+        <!-- HEADER -->
+        <header>
+            <h1>İletişim</h1>
+            <p>
+                İş birliği, proje geliştirme ve staj/fırsat görüşmeleri için aşağıdaki
+                kanallardan benimle iletişime geçebilirsiniz.
+            </p>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- Sol Sütun: İçerik -->
+            <section class="content">
+                <h2>İletişim Bilgileri</h2>
+                <p>
+                    <strong>E-posta:</strong> eminblmk@gmail.com<br>
+                    <strong>Telefon:</strong> +90 533 365 69 44<br>
+                    <strong>Adres:</strong> İstanbul, Türkiye
+                </p>
+                <p>
+                    Hafta içi mesajlara hızlı geri dönüş sağlamaya özen gösteriyorum.
+                    Veri bilimi, yapay zeka ve yazılım projeleri için iletişime geçebilirsiniz.
+                </p>
+            </section>
+
+            <!-- Sağ Sütun: Yan Menü / Bilgi -->
+            <aside class="sidebar">
+                <h2>Bağlantılar</h2>
+                <p>
+                    <strong>GitHub Proje Linki:</strong><br>
+                    https://github.com/blmkemin/blmkemin.github.io
+                </p>
+                <p>
+                    Teknik içerikler, proje detayları ve iş birlikleri için
+                    e-posta üzerinden ulaşmanız en hızlı iletişim yöntemidir.
+                </p>
+            </aside>
+        </main>
+
+        <div class="contact-redirect">
+            <h2>İletişim Formu</h2>
+            <p>Mesaj göndermek için ayrı form sayfasına geçebilirsiniz.</p>
+            <a asp-controller="Home" asp-action="IletisimForm" class="form-link">Forma Git</a>
+        </div>
+    </div>
+</body>
