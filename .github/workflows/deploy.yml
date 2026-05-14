@@ -19,15 +19,15 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "8.0.x"
+          dotnet-version: "9.0.x"
 
       - name: Publish project
-        run: dotnet publish -c Release -o output
+        run: dotnet publish WebProgLab.csproj -c Release -o output
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: output/wwwroot
+          path: LegacyHTML
 
   deploy:
     runs-on: ubuntu-latest
