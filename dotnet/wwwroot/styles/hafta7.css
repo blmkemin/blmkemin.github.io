@@ -1,0 +1,138 @@
+:root {
+    --page-bg: #ffffff;
+    --soft-bg: #f5f6f8;
+    --text-main: #111827;
+    --text-muted: #667085;
+    --card-bg: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--page-bg);
+    color: var(--text-main);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    min-height: 66px;
+}
+
+.nav-link {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.hero-section {
+    padding: clamp(4rem, 9vw, 7rem) 0;
+}
+
+.feature-card,
+.lab-card,
+.form-card,
+.info-section .card {
+    background: var(--card-bg);
+}
+
+.lab-card {
+    min-height: 282px;
+}
+
+.info-section {
+    background: var(--soft-bg);
+}
+
+.reason-box {
+    min-height: 140px;
+    height: 100%;
+    padding: 1.35rem;
+    border-radius: 18px;
+}
+
+.reason-box p {
+    margin-bottom: 0;
+    color: var(--text-muted);
+    font-size: 1.08rem;
+    line-height: 1.55;
+}
+
+.reason-blue {
+    background: #cfe1ff;
+}
+
+.reason-green {
+    background: #cfe7dc;
+}
+
+.reason-yellow {
+    background: #fff0bf;
+}
+
+.reason-cyan {
+    background: #c9f2fb;
+}
+
+.form-section {
+    background: #ffffff;
+}
+
+.form-card {
+    max-width: 980px;
+}
+
+.result-section {
+    background: #ffffff;
+}
+
+body.dark-theme {
+    --page-bg: #111827;
+    --soft-bg: #172033;
+    --text-main: #f8fafc;
+    --text-muted: #cbd5e1;
+    --card-bg: #1f2937;
+}
+
+body.dark-theme .text-secondary {
+    color: #cbd5e1 !important;
+}
+
+body.dark-theme .card,
+body.dark-theme .list-group-item,
+body.dark-theme .form-control,
+body.dark-theme .form-select,
+body.dark-theme textarea {
+    background-color: #1f2937;
+    color: #f8fafc;
+    border-color: #334155;
+}
+
+body.dark-theme .form-control::placeholder,
+body.dark-theme textarea::placeholder {
+    color: #94a3b8;
+}
+
+body.dark-theme .btn-outline-dark {
+    color: #f8fafc;
+    border-color: #f8fafc;
+}
+
+body.dark-theme .btn-outline-secondary {
+    color: #e2e8f0;
+    border-color: #94a3b8;
+}
+
+body.dark-theme .reason-box {
+    color: #0f172a;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    .display-3 {
+        font-size: 2.65rem;
+    }
+}
